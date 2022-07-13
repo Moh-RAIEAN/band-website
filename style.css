@@ -1,0 +1,468 @@
+:root{
+  --h1-big-screen: 2.813rem;
+  --h2-big-screen: 2.188rem;
+  --h3-big-screen: 1.563rem;
+
+  --title-big-screen: 1rem;
+
+  --h1-small-screen: 1.563rem;
+  --h2-small-screen: 1.25rem;
+  --h3-small-screen: 1.125rem;
+
+  --title-small-screen: 10px;
+}
+*{
+  box-sizing: border-box;
+}
+body,ul{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+span.material-icons{
+  font-size: 25px;
+  font-weight: bold;
+  vertical-align:top;
+}
+/*********************** navigation bar design *********************/
+/*************** FOR MOBILE VERSION ***************/
+nav{
+  background-color: rgb(0,0,0,.8);
+  position: sticky;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+}
+nav ul{
+  display: flex;
+  /* FOR ALIGNING HOME AND MENU BUTTON LEFT AND RIGHT */
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+/* HIDE ALL BUTTONS ACCEPT HOME BUTTON FO DESKTOP VERSION */
+nav > ul > li:not(:first-child){
+  display: none;
+}
+/* I WILL CLOSE OUR DESKTOP VERSION DROPDOWN MENU OF NAV BAR */
+li#hideOnSmall{
+  display: none;
+}
+/* TO BROKE  { nav > ul > li:not(:first-child) }--- TIS SELECTOR SPECIFICITY AND SHOW ON MOBILE VERSION */
+li#hideOnLarge{
+  display: block;
+}
+/* design of uor menu button element */
+li a{
+  text-decoration: none;
+  padding: 10px 15px;
+  color: white;
+  font-size: 12px;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: .4s;
+}
+/* set the a and li width */
+li a,li > ul li{
+  width: 100%;
+}
+/* mobile version menu */
+/* important note : this dropdown element is a menu of mobile version and it's parent (li.dropBtn) has no relative position because we wants full width of our viewport and give this look like a menubar  */
+li > ul.dropdown{
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-start;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  border-radius: 0 0 5px 5px;
+  display: none;
+  box-shadow: 2px 3px 6px 0px rgb(0,0,0,.8);
+  z-index: 1;
+
+}
+li.dropBtn:hover ul.dropdown{
+  display: flex;
+  z-index: 1;
+}
+/* dropdown menu buttons style */
+ul.dropdown a{
+  color:rgb(255,255,255,.8);
+  transition: .4s;
+  background-color: rgb(0,0,0,.8);
+}
+nav > ul > li:hover > a{
+  background-color: rgb(255,255,255,.8);
+  color: black;
+  transition: 0s;
+}
+ul.dropdown a:hover{
+  background-color: rgba(127, 255, 212,.8);
+  color: black;
+  display: block;
+  width: 100%;
+  transition: 0s;
+}
+/************************** END OF NAVIGATION MENU ***************/
+
+/* ************************* banner section slide show section **********/
+/* this will apply on all version (mobile and desktop) */
+.slideShow{
+  position: relative;
+}
+.banner img{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  object-fit: cover;
+}
+#one{
+  animation: showHide 10s linear infinite;
+  opacity: 1;
+}
+
+#two,#three{
+  position: absolute;
+  top:0;
+  left: 0;
+  bottom: 4.5px;
+  right: 0;
+}
+/* animate the slide show */
+@keyframes showHide{
+  0%{opacity: 1;}
+  33%{opacity: 1;}
+  33.33%{opacity: 0;}
+  100%{opacity: 0;}
+}
+#two{
+  animation: showHide2 10s linear infinite;
+}
+@keyframes showHide2{
+  0%{opacity: 0;}
+  33%{opacity: 0;}
+  33.33%{opacity: 1;}
+  66%{opacity: 1;}
+  66.66%{opacity: 0;}
+  100%{opacity: 0;}
+} 
+#three{
+  animation: showHide3 10s linear infinite;
+}
+@keyframes showHide3{
+  0%{opacity: 0;}
+  65%{opacity: 0;}
+  65.1%{opacity: 1;}
+  99%{opacity: 1;}
+  99.99%{opacity: 0;}
+  100%{opacity: 0;}
+}
+/* city name and and some text design of banner */
+.banner-title{
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 5px black,0 0 10px black,0 0 15px black;
+  font-size: var(--title-small-screen);
+  display: none;
+}
+/* city name on banner */
+.banner-title h2{
+  font-size: var(--h2-big-screen);
+  margin-bottom: 10px;
+}
+/* ************* banner section ends here********** */
+
+/* ***************the band section *************** */
+/* on smaller screen remove extra padding for good view */
+.container{
+  padding: 0;
+  margin-bottom: 1rem;
+}
+/* section heading and title */
+.content{
+  text-align: justify;
+  padding: 0 10px;
+}
+/* a little title of section */
+.content .title{
+  text-align: center;
+  font-weight: lighter;
+  color: grey;
+}
+/* align our section heading */
+.content h1,h2{
+  text-align: center;
+}
+/* it will contain our card's */
+.cardContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+/* design of our card's */
+.card{
+  box-shadow: 2px 4px 10px 0 rgb(0,0,0,.8);
+  text-align: center;
+  max-width: 90%;
+  border-radius: 5px;
+}
+.card .cardTitle{
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+.card .imgContainer{
+  width: 100%;
+  margin: 0;
+  padding: 0 8px 8px;
+}
+.card img{
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  vertical-align: bottom;
+}
+/* ********** tour dates section *********** */
+.tourDates{
+  background-color: black;
+  color: white;
+  padding: 3rem 0;
+}
+/* ticket status list */
+.tourDates ul{
+  padding: 10px 0;
+  margin: 0;
+  background-color: white;
+  list-style: none;
+  color: black;
+}
+.tourDates ul li{
+  border-bottom: 1px solid lightgrey;
+  padding: 0 5px;
+}
+/* this item help us to aligning ticket list status */
+.tourDates ul li p{
+  margin: 5px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+}
+/* ont available ticket status */
+.tourDates ul li span{
+  background-color: tomato;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  display: inline-block;
+}
+/* available ticket status */
+.tourDates ul li span.badge{
+  border-radius: 50%;
+  background-color: black;
+  padding: 5px 12px;
+}
+/* tour date's card's container */
+.tourDates .cardContainer{
+  margin-top: 3rem;
+  align-items: center;
+}
+.tourDates .card{
+  background-color: white;
+  box-shadow: none;
+  color: black;
+}
+/* take good control on this section's img */
+.tourDates .card .imgContainer{
+  padding-top: 8px;
+}
+/* card's text design */
+.tourDates .cardContent{
+  padding: 8px;
+  text-align: left;
+}
+.tourDates .card .cityName{
+  font-size: 20px;
+  font-weight: bold;
+}
+.tourDates .card .date{
+  color: grey;
+  text-transform: capitalize;
+  margin: 5px 0;
+}
+/* our universal button */
+button{
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  text-transform: capitalize;
+  border-radius: 3px;
+}
+button:hover{
+  background-color: #ccc;
+  color: black;
+  transition: .4s;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.4);
+}
+.contact h2{
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+/* this will make address and form column wise on small screen */
+.contactForm{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.contactForm .address{
+  text-align: left;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.contactForm .address p{
+  margin: 5px 0;
+  font-weight: 500;
+}
+.contactForm .address span.material-icons{
+  margin-right: 10px;
+}
+/* this will push button right side */
+.contactForm form{
+  text-align: right;
+}
+.contactForm form input{
+  padding: 10px;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 10px;
+}
+form input:focus{
+  border: 1px solid black;
+}
+/* wrap element on small screen */
+.contactForm form .formGroup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+/* 100% width input */
+.formGroup input{
+  flex-basis: 100%;
+}
+/* location image */
+.location{
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+footer{
+  text-align: center;
+  padding: 2rem 0;
+}
+footer p i{
+  font-size: 30px;
+}
+/*************FOR DESKTOP AND TABLET VERSION ************/
+@media screen and (min-width: 568px) {
+  /* hide the mobile dropdown menu */
+  li#hideOnLarge{
+    display: none;
+  }
+  /* show the dropdown menu of desktop version */
+  li#hideOnSmall{
+    display: block;
+  }
+  /* align all the menu buttons start it will break mobile version aligning  */
+  nav ul{
+    justify-content: flex-start;
+  }
+  /* for controlling dropdown width */
+  li.dropBtn{
+    position: relative;
+  }
+  /* dropdown design */
+  li > ul.dropdown{
+    width: auto;
+  }
+  ul.dropdown li a{
+    background-color: rgb(255,255,255,.8);
+    color: black;
+  }
+  /* show all desktop menu buttons */
+  nav > ul > li:nth-child(1n+1){
+    display: block;
+  }
+  /* align the search button on the right side */
+  nav ul li.search{
+    margin-left: auto;
+  }
+  li a{
+    font-size: 17px;
+  }
+  nav ul li.search:hover a{
+    background-color: rgb(153, 6, 6);
+    color: white;
+
+  }
+  /* show on big screen */
+.banner-title {
+    display: block;
+  }
+  /* make some space and align middle element */
+.container{
+  max-width: 80%;
+  margin: 0 auto 1rem;
+}
+/* make card's row wise on big screen */
+.cardContainer{
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 1rem;
+}
+/* ticket available badge the black status badge will be aligned to the right */
+.tourDates ul li:last-child p{
+  justify-content: space-between;
+}
+/* make center all card element and give them equal height */
+.tourDates .cardContainer{
+  justify-content: center;
+  align-items: stretch;
+}
+/* make address and contact form row wise */
+.contactForm{
+  flex-direction: row;
+}
+/* give address and form element half width */
+.contactForm .address,.contactForm form{
+  flex-basis: 50%;
+}
+/* stop wrapping address and form element */
+.contactForm form .formGroup{
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+/* equalize two input element */
+.formGroup input{
+  flex-basis: 50%;
+}
+}

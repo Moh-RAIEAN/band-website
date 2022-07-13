@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the brand</title>
+    <!-- google icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <!-- font awesome icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- our own style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- navigation ba2 -->
+    <nav>
+        <ul>
+            <li><a href="#">home</a></li>
+            <!-- this is mobile navigation bar it will appear on mobile screen size -->
+            <li class="dropBtn" id="hideOnLarge">
+                <a href="#">menu icon</a>
+                <ul class="dropdown">
+                    <li><a href="#">band</a></li>
+                    <li><a href="#">tour</a></li>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="#">merch</a></li>
+                </ul>
+            </li>
+            <li><a href="#">band</a></li>
+            <li><a href="#">tour</a></li>
+            <li><a href="#">contact</a></li>
+            <li class="dropBtn" id="hideOnSmall">
+                <a href="#">more <span class="material-icons" > arrow_drop_down </span></a>
+                <ul class="dropdown">
+                    <li><a href="#">merchandise</a></li>
+                    <li><a href="#">extras</a></li>
+                    <li><a href="#">media</a></li>
+                </ul>
+            </li>
+            <li class="search"><a href="#"><span class="material-icons" >
+                search
+                </span>
+                </a></li>
+        </ul>
+    </nav>
+    <!-- banner or slide show section -->
+   <main>
+        <section class="slideShow">
+            <div class="banner" id="one">
+                <img src="https://www.w3schools.com/w3images/la.jpg" alt="los angeles">
+                <div class="banner-title">
+                    <h2>Los Angeles</h2>
+                    <p>We had the best time playing at Venice Beach!</p>
+                </div>
+            </div>
+            <div class="banner" id="two">
+                <img src="https://www.w3schools.com/w3images/ny.jpg" alt="new york">
+                <div class="banner-title">
+                    <h2>New York</h2>
+                    <p>The atmosphere in New York is lorem ipsum.</p>
+                </div>
+            </div>
+            <div class="banner" id="three">
+                <img src="https://www.w3schools.com/w3images/chicago.jpg" alt="Chicago">
+                <div class="banner-title">
+                    <h2>Chicago</h2>
+                    <p>Thank you, Chicago - A night we won't forget.</p>
+                </div>
+            </div>
+        </section>
+        <!-- the band section -->
+        <section class="brand container">
+            <div class="content">
+                <h1>The Brand</h1>
+                <p class="title"><em>We Love Music</em></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est incidunt optio voluptatibus odit quas ratione, nostrum veritatis, ea voluptate quibusdam adipisci possimus quam cupiditate excepturi rerum ex ab soluta ipsum eos sapiente. Atque labore id ex animi ducimus voluptates possimus veritatis. Voluptatibus quas similique suscipit in et, itaque hic minus eos est magni. Quidem voluptatibus possimus vel debitis perferendis rerum commodi nisi eligendi iusto dolorum officiis, obcaecati modi, quisquam sed, molestias sit ex quam ipsa ipsam corrupti. Iste repellendus dolorem ut reiciendis nobis laboriosam natus distinctio architecto in, nemo id saepe aliquam adipisci commodi! Sequi molestias fugiat numquam officiis esse?</p>
+            </div>
+            <!-- team member's photo card's -->
+            <div class="cardContainer">
+                <div class="card">
+                    <figcaption class="cardTitle">name</figcaption>
+                    <figure class="imgContainer">
+                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="band member">
+                    </figure>
+                </div>
+                <div class="card">
+                    <figcaption class="cardTitle">name</figcaption>
+                    <figure class="imgContainer">
+                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="band member">
+                    </figure>
+                </div>
+                <div class="card">
+                    <figcaption class="cardTitle">name</figcaption>
+                    <figure class="imgContainer">
+                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="band member">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <!-- info of our tour dates -->
+        <section class="tourDates">
+            <div class="container">
+                <div class="content">
+                    <h1>TOUR DATES</h1>
+                    <p class="title"><em><strong>Remember to book your tickets!</strong></em></p>
+                </div>
+                <!-- ticket menu -->
+                <ul>
+                    <li>
+                        <p>september <span>sold out</span></p>
+                    </li>
+                    <li><p>October <span>sold out</span></p></li>
+                    <li><p>November <span class="badge">3</span></p></li>
+                </ul>
+                <!-- city of program -->
+                <div class="cardContainer">
+                    <div class="card">
+                        <div class="imgContainer">
+                            <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="new york">
+                        </div>
+                        <div class="cardContent">
+                            <p><span class="cityName">New York</span></p>
+                             <p class="date">fri 27 Nov 2016</p>
+                             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                             <button>buy tickets</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imgContainer">
+                            <img src="https://www.w3schools.com/w3images/paris.jpg" alt="new york">
+                        </div>
+                        <div class="cardContent">
+                            <p><span class="cityName">paris</span></p>
+                            <p class="date">fri 27 Nov 2016</p>
+                            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <button>buy tickets</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imgContainer">
+                            <img src="https://www.w3schools.com/w3images/sanfran.jpg" alt="new york">
+                        </div>
+                        <div class="cardContent">
+                            <p><span class="cityName">san francisco</span></p>
+                            <p class="date">fri 27 Nov 2016</p>
+                            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <button>buy tickets</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact section -->
+        <section class="contact container">
+            <div class="content">
+                <h2>contact</h2>
+                <p class="title">Fan? Drop a note!</p>
+            </div>
+            <div class="contactForm">
+                <!-- address -->
+                <div class="address">
+                    <address>
+                        <p><span class="material-icons"> place </span> Chicago, US</p>
+                        <p><span class="material-icons"> call </span> Phone: +00 151515</p>
+                        <p><span class="material-icons"> email </span> Email: mail@mail.com</p>
+                    </address>
+                </div>
+                <!-- contact form -->
+                <div class="formContainer">
+                    <form action="#">
+                        <div class="formGroup">
+                            <input type="text" placeholder="Name">
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <input type="text" placeholder="Message">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- our location image -->
+        <img src="https://www.w3schools.com/w3images/map.jpg" alt="our location" class="location">
+   </main>
+   <footer>
+    <p><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-snapchat"></i> <i class="fa-brands fa-pinterest"></i> <i class="fa-brands fa-twitter"></i> <i class="fa-brands fa-linkedin"></i></p>
+    <p>inspired by <a href="https://www.w3schools.com/">w3 schools</a></p>
+   </footer>
+</body>
+</html>
